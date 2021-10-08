@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>paroller.js</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <section >
+
+        <!-- header -->
+        <div class="header">
+            <h6 class="text "
+                data-paroller-factor="1"
+                data-paroller-type="foreground"
+                data-paroller-direction="horizontal"
+                data-paroller-transition="transform .2s linear"
+            >
+                Hello parallax lover
+            </h6>
+            <h6 class="text paroller-example mt-3 " >
+                Wanna see the beauty of scrolling and parallax effect 
+            </h6>
+        </div>
+
+
+     
+    </section>
+
+<script src="js/jquery-3.2.1.min.js" ></script>
+<script src="js/jquery.paroller.js"></script>
+<script>
+    $(document)
+        .ready(function () {
+            $('[data-paroller-factor]').paroller();
+            $('.paroller-example').paroller({
+                factorXs: 0.1,
+                factorSm: 0.1,
+                factorMd: -0.4,
+                factorLg: -0.5,
+                factorXl: -0.6,
+                factor: -0.4,
+                type: 'foreground',
+                direction: 'horizontal',
+                transition: 'transform .3s ease-out'
+            });
+        });
+</script>
+
+</body>
+</html>
